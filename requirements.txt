@@ -1,0 +1,9 @@
+streamlit
+pillow
+protobuf
+jinja2
+torch
+boto3
+uvicorn
+fastapi
+ultralytics
