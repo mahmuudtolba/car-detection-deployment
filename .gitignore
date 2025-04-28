@@ -7,3 +7,4 @@ results/
 images/
 ml-models/
 __pycache__/
+.aws/

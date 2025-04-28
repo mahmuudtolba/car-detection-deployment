@@ -1,0 +1,26 @@
+services:
+  app:
+    build: 
+      context: .
+    
+    image: car-detection:1
+    ports:
+      - ":5000"
+
+    volumes:
+      - ./.aws:/root/.aws:ro
+
+
+  nginx:
+    build :
+      context: .
+      dockerfile: Dockerfile.nginx
+
+    image: car-detection:1
+
+    depends_on:
+      - app
+
+    ports:
+      - "80:80"
+
