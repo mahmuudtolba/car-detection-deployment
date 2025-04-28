@@ -81,4 +81,3 @@ async def object_detection(data: ImageDataInput):
         scores=scores,
         prediction_time=prediction_time
     )
-

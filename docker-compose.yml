@@ -3,7 +3,6 @@ services:
     build: 
       context: .
     
-    image: car-detection:1
     ports:
       - ":5000"
 
@@ -15,8 +14,6 @@ services:
     build :
       context: .
       dockerfile: Dockerfile.nginx
-
-    image: car-detection:1
 
     depends_on:
       - app
