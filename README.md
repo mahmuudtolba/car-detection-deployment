@@ -3,6 +3,8 @@
 
 This project provides a **car detection** API service using a pretrained YOLO model. It uses **FastAPI** – a modern, high-performance web framework – to serve object detection requests. The API accepts an image (via URL) and returns detected cars as an annotated image and confidence scores. The service is containerized with Docker and can be run with Docker Compose (using an Nginx reverse proxy). Under the hood, it downloads a YOLO model from an S3 bucket and runs inference with PyTorch, an open-source deep learning library.
 
+![alt text](mlops_arch.PNG)
+
 ## Features
 
 - **Real-time Car Detection:** Detects cars in input images using a YOLO object detection model.  
@@ -11,6 +13,7 @@ This project provides a **car detection** API service using a pretrained YOLO mo
 - **Dockerized Deployment:** Supports deployment with Docker and Docker Compose. Includes an Nginx container as a reverse proxy listening on port 80.  
 - **Model Management via S3:** Downloads pretrained model weights from an AWS S3 bucket (`mlops-udemy-course-aws`). Uses `boto3` to fetch the model.  
 - **Easy Extensibility:** The backend code is modular (FastAPI, Pydantic data models) making it easy to extend for additional functionality.
+
 
 ## Installation
 
@@ -30,7 +33,7 @@ This project provides a **car detection** API service using a pretrained YOLO mo
      ```
 4. **Run with Uvicorn (local):**  
    ```bash
-   uvicorn app.app:app --host 0.0.0.0 --port 5000
+   python -m uvicorn app.app:app
    ```
 5. **Run with Docker Compose (recommended):**  
    Ensure Docker and Docker Compose are installed, then run:  
