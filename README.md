@@ -3,7 +3,7 @@
 
 This project provides a **car detection** API service using a pretrained YOLO model. It uses **FastAPI** – a modern, high-performance web framework – to serve object detection requests. The API accepts an image (via URL) and returns detected cars as an annotated image and confidence scores. The service is containerized with Docker and can be run with Docker Compose (using an Nginx reverse proxy). Under the hood, it downloads a YOLO model from an S3 bucket and runs inference with PyTorch, an open-source deep learning library.
 
-![alt text](mlops_arch.PNG)
+![alt text](utils/mlops_arch.PNG)
 
 ## Features
 
