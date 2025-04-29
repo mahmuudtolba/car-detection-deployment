@@ -10,4 +10,5 @@ torch
 boto3
 uvicorn
 fastapi
+ultralytics
 pydantic[email]

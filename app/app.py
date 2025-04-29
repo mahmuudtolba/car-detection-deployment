@@ -23,7 +23,7 @@ device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cp
 
 # ####### Download ML Models ##########
 
-force_download = False # False
+force_download = True # False
 
 model_name = 'yolov11m/'
 local_path = 'ml-models/'+model_name
